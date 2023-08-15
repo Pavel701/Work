@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Опыт работы</title>
+</head>
+<body>
+  <h1>Опыт работы</h1>
+  <ul>
+    <!-- Цикл для вывода данных массива в HTML -->
+    {% for item in experience %}
+    <li>
+      <h2>{{ item.position }}</h2>
+      <h3>{{ item.company }}</h3>
+      <p>{{ item.duration }}</p>
+      <ul>
+        <!-- Цикл для вывода ответственностей -->
+        {% for responsibility in item.responsibilities %}
+        <li>{{ responsibility }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
